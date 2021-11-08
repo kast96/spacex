@@ -9,6 +9,11 @@ function App() {
       <div className="logo-rocket">
         <Rocket3d />
       </div>
+      <div className="planet">
+        <div className="mars">
+          <div className="img-map"></div>
+        </div>
+      </div>
     </div>
   );
 }
