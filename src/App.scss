@@ -1,10 +1,12 @@
+@import 'main.scss';
+
+$mars-size: 80vw;
+
 .app {
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     background-image: url('./images/stars-min.png'), radial-gradient(circle at center, #351215 10%, #07131E 100%);
 }
-
-$mars-size: 80vw;
 
 .planet {
     border-radius: 100%;
@@ -77,9 +79,4 @@ $mars-size: 80vw;
     mix-blend-mode: soft-light;
     opacity: .4;
     background: url('./images/mars-bg-min.jpeg') 0% 0% / auto 100% repeat-x;
-}
-
-.logo-rocket {
-    width: 80px;
-    height: 80px;
 }
