@@ -10,14 +10,25 @@
     align-items: center;
 
     &__rocket {
-        width: 80px;
-        height: 80px;
+        $size: 80px;
+        width: $size;
+        height: $size;
         margin-right: 10px;
+
+        @media screen and (max-width: 767px) {
+            $size: 60px;
+            width: $size;
+            height: $size;
+        }
     }
 
     &__text {
         font-size: 32px;
         font-weight: 700;
         margin-right: 20px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 20px;
+        }
     }
 }

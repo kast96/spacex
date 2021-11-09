@@ -1,6 +1,6 @@
 import s from './Header.module.scss';
 import Rocket3d from '../Three/Rocket.jsx';
-import Menu from './Menu/Menu.jsx';
+import MainMenu from './MainMenu/MainMenu.jsx';
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
         </div>
         <div className={s.logo__text}>SpaceX React</div>
       </div>
-      <Menu />
+      <MainMenu />
     </header>
   );
 }

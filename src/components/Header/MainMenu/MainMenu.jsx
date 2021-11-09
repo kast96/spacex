@@ -1,7 +1,7 @@
-import s from './Menu.module.scss';
+import s from './MainMenu.module.scss';
 import {NavLink} from 'react-router-dom';
 
-const Menu = () => {
+const MainMenu = () => {
   return (
     <nav className={s.menu}>
       <ul className={s.menu__ul}>
@@ -11,9 +11,12 @@ const Menu = () => {
         <li>
           <NavLink to="/rockets/">Ракеты</NavLink>
         </li>
+        <li>
+          <button className={s.menu__burger}></button>
+        </li>
       </ul>
     </nav>
   );
 }
 
-export default Menu;
+export default MainMenu;

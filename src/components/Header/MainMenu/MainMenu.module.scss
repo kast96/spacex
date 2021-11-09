@@ -1,0 +1,75 @@
+@import '../../../vars.scss';
+
+.menu {
+    &__ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;    
+        }
+    }
+
+    & a {
+        display: block;
+        margin-left: 60px;
+        color: $main-color;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+
+        &:hover {
+            color: $main-color-hover;
+            border-bottom: 1px dashed $main-color-hover;
+        }
+    }
+
+    &__burger {
+        display: none;
+        position: relative;
+        padding: 0;
+        width: 30px;
+        height: 14px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            border-radius: 5px;
+            background-color: $main-color;
+        }
+        
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &:hover {
+            &::before,
+            &::after {
+                background-color: $main-color-hover;
+            }
+        }
+    }
+}

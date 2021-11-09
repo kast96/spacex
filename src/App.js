@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from './components/Header/Header';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import MobileMainMenu from './components/Header/MobileMainMenu/MobileMainMenu.jsx';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             </div>
           </div>
         </div>
+        <MobileMainMenu />
       </div>
     </BrowserRouter>
   );
