@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import MobileMainMenu from './components/Header/MobileMainMenu/MobileMainMenu.jsx';
+import MobileMainMenuContainer from './components/Header/MobileMainMenu/MobileMainMenuContainer';
 import store from './redux/redux-store.js';
 import {Provider} from 'react-redux';
 
@@ -32,7 +32,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <MobileMainMenu />
+            <MobileMainMenuContainer />
           </div>
         </BrowserRouter>
       </Provider>

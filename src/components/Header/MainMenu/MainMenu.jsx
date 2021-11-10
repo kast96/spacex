@@ -1,7 +1,11 @@
 import s from './MainMenu.module.scss';
 import {NavLink} from 'react-router-dom';
 
-const MainMenu = () => {
+const MainMenu = (props) => {
+  const onClickBurger = () => {
+    props.openMobileMenu();
+  }
+
   return (
     <nav className={s.menu}>
       <ul className={s.menu__ul}>
@@ -12,7 +16,7 @@ const MainMenu = () => {
           <NavLink to="/rockets/">Ракеты</NavLink>
         </li>
         <li>
-          <button className={s.menu__burger}></button>
+          <button className={s.menu__burger} onClick={onClickBurger}></button>
         </li>
       </ul>
     </nav>
