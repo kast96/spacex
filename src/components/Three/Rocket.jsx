@@ -28,23 +28,23 @@ function RocketGeomatry(props) {
 
   return (
     <mesh {...props} ref={mesh}>
-      <Cone args={[50, 70, 8]} color="#287fc2" position={[0, 220, 0]} />
-      <Cylinder args={[50, 75, 80, 8]} color="#186fb2" position={[0, 145, 0]} />
-      <Cylinder args={[75, 85, 80, 8]} color="#085fa2" position={[0, 65, 0]} />
+      <Cone args={[50, 70, 8]} color="#cd5a40" position={[0, 220, 0]} />
+      <Cylinder args={[50, 75, 80, 8]} color="#ba3d29" position={[0, 145, 0]} />
+      <Cylinder args={[75, 85, 80, 8]} color="#a2291d" position={[0, 65, 0]} />
 
       <Cylinder args={[85, 85, 200, 8]} color="#FE9" position={[0, -75, 0]} />
 
       <Cylinder args={[55, 55, 40, 8]} color="#4d4b54" position={[0, -175, 0]} />
-      <Cylinder args={[55, 35, 30, 8]} color="#287fc2" position={[0, -195, 0]} />
+      <Cylinder args={[55, 35, 40, 8]} color="#b51e13" position={[0, -195, 0]} />
       <Cylinder args={[35, 35, 30, 8]} color="#4d4b54" position={[0, -215, 0]} />
 
       <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, -60, 75]}>
         <Cylinder args={[55, 55, 40, 8]} color="#4d4b54" position={[0, 0, 0]} />
-        <Cylinder args={[45, 45, 40, 8]} color="#4a6e8a" position={[0, 2, 0]} />
+        <Cylinder args={[45, 45, 40, 8]} color="#d1babc" position={[0, 2, 0]} />
       </mesh>
 
-      <Extrude args={[geoFinShape, finExtrudeSettings]} color="#085fa2" position={[80, -150, 0]} />
-      <Extrude args={[geoFinShape, finExtrudeSettings]} color="#085fa2" position={[-80, -150, 0]} rotation={[0, Math.PI, 0]} />
+      <Extrude args={[geoFinShape, finExtrudeSettings]} color="#a2291d" position={[80, -150, 0]} />
+      <Extrude args={[geoFinShape, finExtrudeSettings]} color="#a2291d" position={[-80, -150, 0]} rotation={[0, Math.PI, 0]} />
     </mesh>
   )
 }
