@@ -8,6 +8,7 @@ import store from './redux/redux-store.js';
 import {Provider} from 'react-redux';
 import Planet from './components/Planet/Planet';
 import Rockets from './components/Rockets/Rockets';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
                   </Route>
                 </Switch>
               </div>
+              <Footer />
               <Planet />
             </div>
             <MobileMainMenuContainer />
