@@ -7,6 +7,7 @@ import MobileMainMenuContainer from './components/Header/MobileMainMenu/MobileMa
 import store from './redux/redux-store.js';
 import {Provider} from 'react-redux';
 import Planet from './components/Planet/Planet';
+import Rockets from './components/Rockets/Rockets';
 
 function App() {
   return (
@@ -16,18 +17,18 @@ function App() {
           <div className={s.app}>
             <div className={s.container}>
               <Header />
-
-              <Switch>
-                <Route exact path="/">
-                </Route>
-                <Route path="/rockets/">
-                  <div>Ракеты</div>
-                </Route>
-                <Route path="*">
-                  <div>404</div>
-                </Route>
-              </Switch>
-
+              <div className={s.zIndexMain}>
+                <Switch>
+                  <Route exact path="/">
+                  </Route>
+                  <Route path="/rockets/">
+                    <div className={s.box}><Rockets /></div>
+                  </Route>
+                  <Route path="*">
+                    <div>404</div>
+                  </Route>
+                </Switch>
+              </div>
               <Planet />
             </div>
             <MobileMainMenuContainer />
