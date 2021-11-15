@@ -1,12 +1,4 @@
-@import 'main.scss';
-
 $mars-size: 80vw;
-
-.app {
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    background-image: url('./images/stars-min.png'), radial-gradient(circle at center, #351215 10%, #07131E 100%);
-}
 
 .planet {
     border-radius: 100%;
@@ -72,11 +64,11 @@ $mars-size: 80vw;
     );
 }
   
-.mars .img-map {
+.mars__img {
     width: $mars-size;
     height: $mars-size;
     position: absolute;
     mix-blend-mode: soft-light;
     opacity: .4;
-    background: url('./images/mars-bg-min.jpeg') 0% 0% / auto 100% repeat-x;
+    background: url('/images/mars-bg-min.jpeg') 0% 0% / auto 100% repeat-x;
 }

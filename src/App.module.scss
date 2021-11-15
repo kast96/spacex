@@ -1,10 +1,12 @@
-@import './fonts/Nunito/Nunito.scss';
 @import 'vars.scss';
 
-body {
+.app {
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: $main-color;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    background-image: url('./images/stars-min.png'), radial-gradient(circle at center, #351215 10%, #07131E 100%);
 }
 
 .container {
