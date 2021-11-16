@@ -1,11 +1,10 @@
-import Preloader from "../Preloader/Preloader";
+import Rocket from "./Rocket";
 
-const Rockets = () => {
+const Rockets = ({rockets}) => {
+  console.log(rockets);
   return (
     <div>
-      <h1>Ракеты</h1>
-      <p>Контент</p>
-      <Preloader />
+      {rockets.map((rocket, index) => <Rocket key={index} rocket={rocket} />)}
     </div>
   );
 }

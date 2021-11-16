@@ -7,7 +7,7 @@ import MobileMainMenuContainer from './components/Header/MobileMainMenu/MobileMa
 import store from './redux/redux-store.js';
 import {Provider} from 'react-redux';
 import Planet from './components/Planet/Planet';
-import Rockets from './components/Rockets/Rockets';
+import RocketsContainer from './components/Rockets/RocketsContainer';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
                   </Route>
                   <Route path="/rockets/">
                     <div className={s.box}>
-                      <Rockets />
+                      <RocketsContainer />
                     </div>
                   </Route>
                   <Route path="*">
