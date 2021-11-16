@@ -23,7 +23,9 @@ function App() {
                   <Route exact path="/">
                   </Route>
                   <Route path="/rockets/">
-                    <div className={s.box}><Rockets /></div>
+                    <div className={s.box}>
+                      <Rockets />
+                    </div>
                   </Route>
                   <Route path="*">
                     <div>404</div>
