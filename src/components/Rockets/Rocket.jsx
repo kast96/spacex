@@ -51,7 +51,7 @@ const Rocket = ({rocket}) => {
 					}
 					{!!rocket.wikipedia && 
 						<RocketProperty title="Страница на wikipedia">
-							<a href={rocket.wikipedia} target="_blank">Открыть</a>
+							<a href={rocket.wikipedia} target="_blank" rel="noopener noreferrer">Открыть</a>
 						</RocketProperty>
 					}
 				</div>
