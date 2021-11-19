@@ -1,0 +1,64 @@
+@import '../../vars.scss';
+
+.rocket {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: $box-padding;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    margin-bottom: 40px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__active {
+        padding: 10px 0;
+        font-weight: 600;
+        color: #cbc80d;
+
+        &::before {
+            $size: 10px;
+            content: '';
+            display: inline-block;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background-color: currentColor;
+            margin-right: 6px;
+        }
+
+        &:global(.active) {
+            color: #3dd130;
+        }
+
+        &:global(.not-active) {
+            color: #fd3636;
+        }
+    }
+
+    &__imgs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        max-width: 180px;
+        max-height: 180px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    &__props {
+        &__group {
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+        }
+    }
+}

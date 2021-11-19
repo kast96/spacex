@@ -1,2 +1,12 @@
-$main-color: #fdf1e8;
-$main-color-hover: #beb9b4;
+$main-color: #8a1111;
+
+$text-color: #fdf1e8;
+$text-color-hover: #beb9b4;
+
+$link-color: #ff5e5e;
+$link-color-hover: lighten($link-color, 10);
+
+$border-color: #af8b8b;
+$border-radius: 6px;
+
+$box-padding: 10px 30px 20px;

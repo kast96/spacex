@@ -1,9 +1,17 @@
 @import 'vars.scss';
 
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-color-hover;
+    }
+}
+
 .app {
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: $main-color;
+    color: $text-color;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     background-image: url('./images/stars-min.png'), radial-gradient(circle at center, #351215 10%, #07131E 100%);

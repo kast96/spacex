@@ -25,7 +25,7 @@
 
     & a {
         display: block;
-        color: $main-color;
+        color: $text-color;
         text-decoration: none;
         font-size: 16px;
         font-weight: 700;
@@ -34,7 +34,7 @@
         text-align: center;
 
         &:hover {
-            color: $main-color-hover;
+            color: $text-color-hover;
         }
     }
 
@@ -59,7 +59,7 @@
             content: '';
             position: absolute;
             border-radius: 5px;
-            background-color: $main-color;
+            background-color: $text-color;
         }
         
         &::before {
@@ -81,7 +81,7 @@
         &:hover {
             &::before,
             &::after {
-                background-color: $main-color-hover;
+                background-color: $text-color-hover;
             }
         }
     }
