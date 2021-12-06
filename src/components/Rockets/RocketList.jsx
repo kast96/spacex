@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import s from './Rocket.module.scss';
+import s from './RocketList.module.scss';
 import Fancybox from '../Fancybox/Fancybox';
 import RocketProperty from './RocketProperty';
 
-const Rocket = ({rocket}) => {
+const RocketList = ({rocket}) => {
 	return (
 		<div className={s.rocket}>
 			<div className={s.rocket__header}>
@@ -171,4 +171,4 @@ const Rocket = ({rocket}) => {
 	);
 }
 
-export default Rocket;
+export default RocketList;

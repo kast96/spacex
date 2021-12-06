@@ -1,9 +1,9 @@
-import Rocket from "./Rocket";
+import RocketList from "./RocketList";
 
 const Rockets = ({rockets}) => {
   return (
     <div>
-      {rockets.map(rocket => <Rocket key={rocket.id} rocket={rocket} />)}
+      {rockets.map(rocket => <RocketList key={rocket.id} rocket={rocket} />)}
     </div>
   );
 }
