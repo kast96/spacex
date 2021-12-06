@@ -1,6 +1,6 @@
-import s from './RocketProperty.module.scss';
+import s from './Property.module.scss';
 
-const RocketProperty = ({children, title, value}) => {
+const Property = ({children, title}) => {
 	return (
 		<div className={s.property}>
 			{title &&
@@ -11,4 +11,4 @@ const RocketProperty = ({children, title, value}) => {
 	);
 }
 
-export default RocketProperty;
+export default Property;
