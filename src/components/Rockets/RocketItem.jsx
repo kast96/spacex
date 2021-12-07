@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import s from './RocketList.module.scss';
+import s from './RocketItem.module.scss';
 import Fancybox from '../Fancybox/Fancybox';
 import PropertyGroup from '../Property/PropertyGroup';
 
