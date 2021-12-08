@@ -8,6 +8,7 @@ import store from './redux/redux-store.js';
 import {Provider} from 'react-redux';
 import Planet from './components/Planet/Planet';
 import RocketsContainer from './components/Rockets/RocketsContainer';
+import RocketContainer from './components/Rockets/RocketContainer';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -22,9 +23,14 @@ function App() {
                 <Switch>
                   <Route exact path="/">
                   </Route>
-                  <Route path="/rockets/">
+                  <Route exact path="/rockets/">
                     <div className={s.box}>
                       <RocketsContainer />
+                    </div>
+                  </Route>
+                  <Route path="/rockets/:id?">
+                    <div className={s.box}>
+                      <RocketContainer />
                     </div>
                   </Route>
                   <Route path="*">

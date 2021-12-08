@@ -9,5 +9,11 @@ export const rocketsAPI = {
         return instance.get(`rockets`).then(response => {
             return response.data;
         });
+    },
+
+    getById(id) {
+        return instance.get(`rockets/${id}`).then(response => {
+            return response.data;
+        });
     }
 }
