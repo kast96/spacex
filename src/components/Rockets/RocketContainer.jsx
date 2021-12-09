@@ -5,6 +5,7 @@ import Preloader from "../Preloader/Preloader";
 import Rocket from "./Rocket";
 import { withRouter } from "react-router";
 import { compose } from 'redux';
+import { getStateIsLoading, getStateRocket } from "../../redux/selectors-rocket";
 
 const RocketContainer = React.memo(({rocket, isLoading, getRocket, match}) => {
   useEffect(() => {
@@ -22,8 +23,8 @@ const RocketContainer = React.memo(({rocket, isLoading, getRocket, match}) => {
 
 const mapStateToProps = (state) => {
   return {
-    rocket: state.rocket.rocket,
-    isLoading: state.rocket.isLoading
+    rocket: getStateRocket(state),
+    isLoading: getStateIsLoading(state)
   }
 }
 

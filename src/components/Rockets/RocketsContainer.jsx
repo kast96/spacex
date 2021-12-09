@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getRockets } from "../../redux/reducer-rockets";
+import { getStateRockets, getStateIsLoading } from "../../redux/selectors-rockets";
 import Preloader from "../Preloader/Preloader";
 import Rockets from "./Rockets";
 
@@ -20,8 +21,8 @@ const RocketsContainer = React.memo(({rockets, isLoading, getRockets}) => {
 
 const mapStateToProps = (state) => {
   return {
-    rockets: state.rockets.rockets,
-    isLoading: state.rockets.isLoading
+    rockets: getStateRockets(state),
+    isLoading: getStateIsLoading(state)
   }
 }
 
