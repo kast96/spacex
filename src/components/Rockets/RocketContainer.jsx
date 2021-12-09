@@ -9,7 +9,7 @@ import { compose } from 'redux';
 const RocketContainer = React.memo(({rocket, isLoading, getRocket, match}) => {
   useEffect(() => {
     getRocket(match.params.id);
-  }, [match.params.id]);
+  }, [getRocket, match.params.id]);
   
   return (
     <div>
