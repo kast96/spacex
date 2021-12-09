@@ -35,7 +35,7 @@ const PropertyGroup = ({name, properties}) => {
 						)
 				
 					default:
-						return <Property key={index} title={property.name}>{property.value}</Property>
+						return <Property key={index} title={property.name}>{property.value}{property.dimension}</Property>
 				}
 			})}
 		</div>

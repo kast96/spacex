@@ -8,71 +8,71 @@ const Rocket = ({rocket}) => {
 		general: {
 			name: 'Общая информация',
 			properties: [
-				{name: 'Компания', value: rocket.company},
-				{name: 'Страна', value: rocket.country},
-				{name: 'Стоимость запуска', value: rocket.cost_per_launch+'$'},
-				{name: 'Дата первого запуска', value: rocket.first_flight},
-				{name: 'Процент успеха', value: rocket.success_rate_pct+'%'},
+				{name: 'Компания', value: rocket?.company},
+				{name: 'Страна', value: rocket?.country},
+				{name: 'Стоимость запуска', value: rocket?.cost_per_launch, dimension: '$'},
+				{name: 'Дата первого запуска', value: rocket?.first_flight},
+				{name: 'Процент успеха', value: rocket?.success_rate_pct, dimension: '%'},
 				{name: 'Тип', value: rocket.type},
-				{name: 'Страница на wikipedia', value: rocket.wikipedia, type: 'wikipedia'},
+				{name: 'Страница на wikipedia', value: rocket?.wikipedia, type: 'wikipedia'},
 			]
 		},
 		description: {
 			name: 'Описание',
 			properties: [
-				{value: rocket.description}
+				{value: rocket?.description}
 			]
 		},
 		characteristic: {
 			name: 'Характеристики',
 			properties: [
-				{name: 'Диаметр ракеты', value: rocket.diameter.meters+' м'},
-				{name: 'Высора ракеты', value: rocket.height.meters+' м'},
-				{name: 'Масса', value: rocket.mass.kg+' кг'},
-				{name: 'Количество ускорителей', value: rocket.boosters},
-				{name: 'Количество ступеней', value: rocket.stages},
-				{name: 'Количество посадочных ног', value: rocket.landing_legs.number},
-				{name: 'Материал посадочных ног', value: rocket.landing_legs.material},
+				{name: 'Диаметр ракеты', value: rocket?.diameter?.meters, dimension: ' м'},
+				{name: 'Высора ракеты', value: rocket?.height?.meters, dimension: ' м'},
+				{name: 'Масса', value: rocket?.mass?.kg, dimension: ' кг'},
+				{name: 'Количество ускорителей', value: rocket?.boosters},
+				{name: 'Количество ступеней', value: rocket?.stages},
+				{name: 'Количество посадочных ног', value: rocket?.landing_legs?.number},
+				{name: 'Материал посадочных ног', value: rocket?.landing_legs?.material},
 			]
 		},
 		engine: {
 			name: 'Двигатель',
 			properties: [
-				{name: 'Тип двигателя', value: rocket.engines.type},
-				{name: 'Версия двигателя', value: rocket.engines.version},
-				{name: 'Макет двигателя', value: rocket.engines.layout},
-				{name: 'Максимальная мощность двигателя', value: rocket.engines.engine_loss_max},
-				{name: 'Тяга к весу двигателя', value: rocket.engines.thrust_to_weight},
-				{name: 'Массовый импульс двигателя над уровнем моря', value: rocket.engines.isp.sea_level},
-				{name: 'Массовый импульс двигателя в вакууме', value: rocket.engines.isp.vacuum},
-				{name: 'Пропеллант 1', value: rocket.engines.propellant_1},
-				{name: 'Пропеллант 2', value: rocket.engines.propellant_2},
-				{name: 'Cила двигателя над уровнем моря', value: rocket.engines.thrust_sea_level.kN+' кН'},
-				{name: 'Cила двигателя в вакууме', value: rocket.engines.thrust_vacuum.kN+' кН'},
+				{name: 'Тип двигателя', value: rocket?.engines?.type},
+				{name: 'Версия двигателя', value: rocket?.engines?.version},
+				{name: 'Макет двигателя', value: rocket?.engines?.layout},
+				{name: 'Максимальная мощность двигателя', value: rocket?.engines?.engine_loss_max},
+				{name: 'Тяга к весу двигателя', value: rocket?.engines?.thrust_to_weight},
+				{name: 'Массовый импульс двигателя над уровнем моря', value: rocket?.engines?.isp?.sea_level},
+				{name: 'Массовый импульс двигателя в вакууме', value: rocket?.engines?.isp?.vacuum},
+				{name: 'Пропеллант 1', value: rocket?.engines?.propellant_1},
+				{name: 'Пропеллант 2', value: rocket?.engines?.propellant_2},
+				{name: 'Cила двигателя над уровнем моря', value: rocket?.engines?.thrust_sea_level?.kN, dimension: ' кН'},
+				{name: 'Cила двигателя в вакууме', value: rocket?.engines?.thrust_vacuum?.kN, dimension: ' кН'},
 			]
 		},
 		first_stage: {
 			name: 'Первая ступень',
 			properties: [
-				{name: 'Время горения', value: rocket.first_stage.burn_time_sec+' сек'},
-				{name: 'Количество двигателей', value: rocket.first_stage.engines},
-				{name: 'Количество топлива', value: rocket.first_stage.fuel_amount_tons+' тонн'},
-				{name: 'Сила над уровнем моря', value: rocket.first_stage.thrust_sea_level.kN+' кН'},
-				{name: 'Сила в вакууме', value: rocket.first_stage.thrust_vacuum.kN+' кН'},
+				{name: 'Время горения', value: rocket?.first_stage?.burn_time_sec, dimension: ' сек'},
+				{name: 'Количество двигателей', value: rocket?.first_stage?.engines},
+				{name: 'Количество топлива', value: rocket?.first_stage?.fuel_amount_tons, dimension: ' тонн'},
+				{name: 'Сила над уровнем моря', value: rocket?.first_stage?.thrust_sea_level?.kN, dimension: ' кН'},
+				{name: 'Сила в вакууме', value: rocket?.first_stage?.thrust_vacuum?.kN, dimension: ' кН'},
 			]
 		},
 		second_stage: {
 			name: 'Вторая ступень',
 			properties: [
-				{name: 'Время горения', value: rocket.second_stage.burn_time_sec+' сек'},
-				{name: 'Количество двигателей', value: rocket.second_stage.engines},
-				{name: 'Количество топлива', value: rocket.second_stage.fuel_amount_tons+' тонн'},
+				{name: 'Время горения', value: rocket?.second_stage?.burn_time_sec, dimension: ' сек'},
+				{name: 'Количество двигателей', value: rocket?.second_stage?.engines},
+				{name: 'Количество топлива', value: rocket?.second_stage?.fuel_amount_tons, dimension: ' тонн'},
 			]
 		},
 		payload_weights: {
 			name: 'Полезная нагрузка',
 			properties: [
-				{value: rocket.payload_weights, type: 'payload_weights'},
+				{value: rocket?.payload_weights, type: 'payload_weights'},
 			]
 		},
 	};
