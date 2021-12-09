@@ -32,8 +32,8 @@ export const getRockets = () => {
 	return async (dispatch) => {
 		dispatch(toggleIsLoading(true));
 		let response = await rocketsAPI.getList();
-		dispatch(toggleIsLoading(false));
 		dispatch(setRockets(response));
+		dispatch(toggleIsLoading(false));
 	}
 }
 

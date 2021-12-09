@@ -17,7 +17,7 @@ const Rocket = ({rocket}) => {
 				{name: 'Страница на wikipedia', value: rocket.wikipedia, type: 'wikipedia'},
 			]
 		},
-		/*description: {
+		description: {
 			name: 'Описание',
 			properties: [
 				{value: rocket.description}
@@ -74,7 +74,7 @@ const Rocket = ({rocket}) => {
 			properties: [
 				{value: rocket.payload_weights, type: 'payload_weights'},
 			]
-		},*/
+		},
 	};
 
 	return (
