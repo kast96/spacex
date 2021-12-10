@@ -23,12 +23,13 @@ a {
     padding: 0 30px;
 }
 
-.box {
-    background-color: rgba($color: #000, $alpha: 0.5);
-    padding: 10px 40px 40px;
-}
-
 .zIndexMain {
     position: relative;
     z-index: 10;
+}
+
+
+:global(.box) {
+    background-color: rgba($color: #000, $alpha: 0.5);
+    padding: 10px 40px 40px;
 }
