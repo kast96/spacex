@@ -7,9 +7,9 @@ import MobileMainMenuContainer from './components/Header/MobileMainMenu/MobileMa
 import store from './redux/redux-store.js';
 import {Provider} from 'react-redux';
 import Planet from './components/Planet/Planet';
-import RocketsContainer from './components/Rockets/RocketsContainer';
-import RocketContainer from './components/Rockets/RocketContainer';
 import Footer from './components/Footer/Footer';
+import routes from './utils/routes/routes';
+import { compose } from "redux";
 
 function App() {
   return (
@@ -21,21 +21,19 @@ function App() {
               <Header />
               <div className={s.zIndexMain}>
                 <Switch>
-                  <Route exact path="/">
-                  </Route>
-                  <Route exact path="/rockets/">
-                    <div className={s.box}>
-                      <RocketsContainer />
-                    </div>
-                  </Route>
-                  <Route path="/rockets/:id?">
-                    <div className={s.box}>
-                      <RocketContainer />
-                    </div>
-                  </Route>
-                  <Route path="*">
-                    <div>404</div>
-                  </Route>
+                  {routes.map(({ path, Component, hocs, ...props }, key) => {
+                    let ResultComponent = Component;
+                    if(hocs instanceof Array) {
+                      ResultComponent = compose(
+                        ...hocs
+                      )(ResultComponent);
+                    }
+                    return (
+                      <Route exact path={path} key={key}>
+                        <ResultComponent {...props} />
+                      </Route>
+                    )
+                  })}
                 </Switch>
               </div>
               <Footer />
