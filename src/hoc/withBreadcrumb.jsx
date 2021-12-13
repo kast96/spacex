@@ -1,5 +1,5 @@
-import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
-import routes from "../utils/routes/routes";
+import BreadcrumbContainer from "../components/Breadcrumb/BreadcrumbContainer";
+import { routes } from "../utils/routes/routes";
 
 export const withBreadcrumb = (Component) => {
     const breadcrumbComponent = (props) => {
@@ -16,11 +16,9 @@ export const withBreadcrumb = (Component) => {
             ...rest
             }));
 
-        console.log(crumbs);
-
         return (
             <>
-                <Breadcrumb crumbs={crumbs} />
+                <BreadcrumbContainer crumbs={crumbs} />
                 <Component {...props} />
             </>
         );

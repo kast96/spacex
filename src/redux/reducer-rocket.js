@@ -1,4 +1,5 @@
 import {rocketsAPI} from '../api/api.js';
+import { setBreadcrumbDetail } from './reducer-app.js';
 
 const SET_ROCKET = 'spacex/rocket/SET-ROCKET';
 const TOGGLE_IS_LOADING = 'spacex/rocket/TOGGLE-IS-LOADING';
@@ -30,9 +31,11 @@ export const setRocket = (rocket) => {
 
 export const getRocket = (id) => {
 	return async (dispatch) => {
+        dispatch(setBreadcrumbDetail(false));
 		dispatch(toggleIsLoading(true));
 		let response = await rocketsAPI.getById(id);
 		dispatch(setRocket(response));
+        dispatch(setBreadcrumbDetail(response.name));
 		dispatch(toggleIsLoading(false));
 	}
 }

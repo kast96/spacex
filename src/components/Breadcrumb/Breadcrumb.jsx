@@ -1,28 +1,45 @@
 import { Link } from "react-router-dom";
 import s from "./Breadcrumb.module.scss";
+import { variables } from "../../utils/routes/routes";
 
-const Breadcrumbs = ({ crumbs }) => {
-  if (crumbs.length <= 1) {
+const Breadcrumb = ({ crumbs, values }) => {
+  let resultCrumbs = [];
+
+  crumbs.forEach((element, key) => {
+    for (const variableKey in variables) {
+      if (element.variable === variables[variableKey]) {
+        if (values[variableKey]) {
+          element.name = values[variableKey];
+        } else {
+          continue;
+        }
+      }
+      resultCrumbs[key] = element;
+    }
+  });
+
+  if (resultCrumbs.length <= 1) {
     return null;
   }
+
   return (
     <div className={s.breadcrumb}>
-      {crumbs.map(({ name, path }, key) =>
-        key + 1 === crumbs.length ? (
+      {resultCrumbs.map(({ name, path }, key) =>
+        key + 1 === resultCrumbs.length ? (
           <span className={s.breadcrumb__item} key={key}>
             {name}
           </span>
         ) : (
-          <>
-            <Link className={s.breadcrumb__item} key={key} to={path}>
+          <span key={key}>
+            <Link className={s.breadcrumb__item} to={path}>
               {name}
             </Link>
             <span className={s.breadcrumb__arrow}>{'>'}</span>
-          </>
+          </span>
         )
       )}
     </div>
   );
 };
 
-export default Breadcrumbs;
+export default Breadcrumb;

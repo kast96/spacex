@@ -14,7 +14,7 @@ const RocketContainer = React.memo(({rocket, isLoading, getRocket, match}) => {
   
   return (
     <div>
-      <h1>{rocket.name || 'Ракета'}</h1>
+      <h1>{rocket.name || 'Загрузка...'}</h1>
       {isLoading && <Preloader />}
       {!isLoading && <Rocket rocket={rocket} />}
     </div>

@@ -6,11 +6,13 @@ import {withContainer} from '../../hoc/withContainer';
 import {withBreadcrumb} from '../../hoc/withBreadcrumb';
 import { withRouter } from "react-router";
 
-const routes = [
+export const variables = {
+    detail: "#DETAIL#"
+};
+
+export const routes = [
     { path: "/", name: "Главная", Component: Index, hocs: [withContainer, withRouter, withBreadcrumb] },
     { path: "/rockets/", name: "Ракеты", Component: RocketsContainer, hocs: [withContainer, withRouter, withBreadcrumb] },
-    { path: "/rockets/:id", name: "Ракета", Component: RocketContainer, hocs: [withContainer, withRouter, withBreadcrumb] },
+    { path: "/rockets/:id", name: 'Loading...', variable: variables.detail, Component: RocketContainer, hocs: [withContainer, withRouter, withBreadcrumb] },
     { path: "/*", name: "404", Component: Error404, hocs: [withContainer, withRouter, withBreadcrumb] },
 ];
-
-export default routes;
