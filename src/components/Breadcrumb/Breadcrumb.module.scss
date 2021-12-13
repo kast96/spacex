@@ -1,0 +1,12 @@
+.breadcrumb {
+    margin: 10px 0;
+
+    &__item,
+    &__arrow {
+        margin-right: 10px;
+    }
+
+    &__arrow {
+        font-size: 12px;
+    }
+}

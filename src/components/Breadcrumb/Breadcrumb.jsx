@@ -1,20 +1,24 @@
 import { Link } from "react-router-dom";
+import s from "./Breadcrumb.module.scss";
 
 const Breadcrumbs = ({ crumbs }) => {
   if (crumbs.length <= 1) {
     return null;
   }
   return (
-    <div>
+    <div className={s.breadcrumb}>
       {crumbs.map(({ name, path }, key) =>
         key + 1 === crumbs.length ? (
-          <span key={key}>
+          <span className={s.breadcrumb__item} key={key}>
             {name}
           </span>
         ) : (
-          <Link key={key} to={path}>
-            {name}
-          </Link>
+          <>
+            <Link className={s.breadcrumb__item} key={key} to={path}>
+              {name}
+            </Link>
+            <span className={s.breadcrumb__arrow}>{'>'}</span>
+          </>
         )
       )}
     </div>
