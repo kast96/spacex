@@ -4,17 +4,17 @@ import Fancybox from '../Fancybox/Fancybox';
 import PropertyGroup from '../Property/PropertyGroup';
 import { NavLink } from 'react-router-dom';
 
-const RocketList = ({rocket}) => {
+const RocketItem = ({rocket}) => {
 	let propertiesGroups = {
 		general: {
 			name: 'Общая информация',
 			properties: [
-				{name: 'Компания', value: rocket.company},
-				{name: 'Страна', value: rocket.country},
-				{name: 'Стоимость запуска', value: rocket.cost_per_launch+'$'},
-				{name: 'Дата первого запуска', value: rocket.first_flight},
-				{name: 'Процент успеха', value: rocket.success_rate_pct+'%'},
-				{name: 'Тип', value: rocket.type},
+				{name: 'Компания', value: rocket?.company},
+				{name: 'Страна', value: rocket?.country},
+				{name: 'Стоимость запуска', value: rocket?.cost_per_launch, dimension: '$'},
+				{name: 'Дата первого запуска', value: rocket?.first_flight},
+				{name: 'Процент успеха', value: rocket?.success_rate_pct, dimension: '%'},
+				{name: 'Тип', value: rocket?.type},
 			]
 		},
 		description: {
@@ -61,4 +61,4 @@ const RocketList = ({rocket}) => {
 	);
 }
 
-export default RocketList;
+export default RocketItem;
