@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import s from "./Breadcrumb.module.scss";
-import { variables } from "../../utils/routes/routes";
+import { variables } from "../../data/routes/routes";
 
 const Breadcrumb = ({ crumbs, values }) => {
   let resultCrumbs = [];

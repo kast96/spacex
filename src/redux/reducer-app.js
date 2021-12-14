@@ -1,4 +1,4 @@
-import { variables } from '../utils/routes/routes';
+import { variables } from '../data/routes/routes';
 
 const OPENED_MOBILE_MENU = 'spacex/app/OPENED-MOBILE-MENU';
 const SET_BREADCRUMB_DETAIL = 'spacex/app/SET-BREADCRUMB-DETAIL';

@@ -1,7 +1,7 @@
 import Breadcrumb from "./Breadcrumb";
 import { connect } from "react-redux";
 import { compose } from 'redux';
-import { variables } from "../../utils/routes/routes";
+import { variables } from "../../data/routes/routes";
 
 const BreadcrumbContainer = ({crumbs, values}) => {
   return (

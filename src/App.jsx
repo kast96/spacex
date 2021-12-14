@@ -8,7 +8,7 @@ import store from './redux/redux-store.js';
 import {Provider} from 'react-redux';
 import Planet from './components/Planet/Planet';
 import Footer from './components/Footer/Footer';
-import { routes } from './utils/routes/routes';
+import { routes } from './data/routes/routes';
 import { compose } from "redux";
 
 function App() {

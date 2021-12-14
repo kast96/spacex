@@ -1,5 +1,5 @@
 import BreadcrumbContainer from "../components/Breadcrumb/BreadcrumbContainer";
-import { routes } from "../utils/routes/routes";
+import { routes } from "../data/routes/routes";
 
 export const withBreadcrumb = (Component) => {
     const breadcrumbComponent = (props) => {
