@@ -10,11 +10,16 @@ const StarlinksContainer = React.memo(({starlinks, isLoading, getStarlinks}) => 
     getStarlinks();
   }, [getStarlinks]);
 
+  const onPageChanged = (pageNubmer) => {
+    getStarlinks(pageNubmer);
+    //this.props.setCurrentPage(pageNubmer);
+  }
+
   return (
     <div>
       <h1>Starlink</h1>
       {isLoading && <Preloader />}
-      {!isLoading && <Starlinks starlinks={starlinks.docs} />}
+      {!isLoading && <Starlinks starlinks={starlinks.docs} currentPage={starlinks.page} totalPages={starlinks.totalDocs} onPageChanged={onPageChanged} />}
     </div>
   );
 });
