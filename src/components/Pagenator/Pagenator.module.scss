@@ -1,0 +1,28 @@
+@import '../../vars.scss';
+
+.pagenator {
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__page {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-right: 5px;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        border-radius: $border-radius;
+        color: $link-color;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        &:global(.is-active),
+        &__dots {
+            color: #fff;
+            cursor: default;
+        }
+    }
+}

@@ -32,7 +32,7 @@ export const getStarlinks = (page) => {
     if(!page) page = 0;
 	return async (dispatch) => {
 		dispatch(toggleIsLoading(true));
-		let response = await starlinksAPI.query({page, limit: 10});
+		let response = await starlinksAPI.query({}, {page, limit: 10});
 		dispatch(setStarlinks(response));
 		dispatch(toggleIsLoading(false));
 	}

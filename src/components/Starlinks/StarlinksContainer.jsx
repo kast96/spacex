@@ -19,7 +19,7 @@ const StarlinksContainer = React.memo(({starlinks, isLoading, getStarlinks}) => 
     <div>
       <h1>Starlink</h1>
       {isLoading && <Preloader />}
-      {!isLoading && <Starlinks starlinks={starlinks.docs} currentPage={starlinks.page} totalPages={starlinks.totalDocs} onPageChanged={onPageChanged} />}
+      {!isLoading && <Starlinks starlinks={starlinks.docs} currentPage={starlinks.page} totalPages={starlinks.totalPages} onPageChanged={onPageChanged} />}
     </div>
   );
 });
