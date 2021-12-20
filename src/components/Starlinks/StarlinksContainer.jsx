@@ -18,7 +18,6 @@ const StarlinksContainer = React.memo(({starlinks, isLoading, getStarlinks, matc
     getStarlinks(pageNubmer);
     const url = (pageNubmer === 1) ? `${match.path}` : `${match.path}?page=${pageNubmer}`;
     history.push(url);
-    //this.props.setCurrentPage(pageNubmer);
   }
 
   return (
