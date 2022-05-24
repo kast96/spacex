@@ -16,4 +16,4 @@ yarn start
 ![detail](https://raw.githubusercontent.com/kast96/spacex/main/screenshots/rocketDetail.png)
 
 ## Основные технологии
-React, React-Router-Native, Redux, Axios, ThreeJS
+React, React-Router-Dom, Redux, Axios, ThreeJS
